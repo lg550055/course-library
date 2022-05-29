@@ -1,0 +1,14 @@
+body {
+  background-color: navy;
+  color: azure;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+  color: lightgreen;
+}
+
+main {
+  margin: 7vh 0;
+}

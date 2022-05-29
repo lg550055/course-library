@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Courses Home</h1>
+
+  <h3>Catalog Stats</h3>
+
+  <h4>Courses: {{ num_courses }}</h4>
+  <h4>Live Courses: {{ num_instances }}</h4>
+  <h4>Active Live Courses: {{ num_instances_active }}</h4>
+  <h4>Topics: {{ num_topics }}</h4>
+  <h4>Authors: {{ num_authors }}</h4>
+
+{% endblock %}
