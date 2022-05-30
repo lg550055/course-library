@@ -3,12 +3,17 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+
+  <h3>Welcome to our Curriculum site</h3>
+  <br>
   {% if user.is_authenticated %}
     Hi {{ user.username }}!
-    <p><a href="{% url 'logout' %}">Log Out</a></p>
+    <p>See our <a href="{% url 'index' %}">catalog stats</a></p>
+    <p>Or our <a href="{% url 'course_list' %}">course list</a></p>
   {% else %}
-    <p>You are not logged in</p>
-    <a href="{% url 'login' %}">Log In</a> |
+    <h3>You are not logged in</h3>
+    <a href="{% url 'login' %}">Log In</a> or
     <a href="{% url 'signup' %}">Sign Up</a>
   {% endif %}
+
 {% endblock %}

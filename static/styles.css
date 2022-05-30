@@ -7,12 +7,12 @@ body {
 
 a {
   color: lightgreen;
-  font-size: small;
-  padding: 0 5vw;
+  font-size: 0.9em;
+  padding: 0 2px;
 }
 
 main {
-  margin: 7vh 0;
+  margin: 5vh 0;
 }
 
 nav {
