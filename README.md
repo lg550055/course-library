@@ -1,4 +1,4 @@
-# Curriculum Catalog
+# Course Catalog
 
 Django full-stack site hosting our course catalog.
 
