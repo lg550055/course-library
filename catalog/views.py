@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Course, CourseInstance, Author, Topic
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 
 
 def index(request):
@@ -25,3 +26,14 @@ class CourseDetailView(DetailView):
   template_name = 'course_detail.html'
   model = Course
 
+class CourseCreateView(CreateView):
+  model = Course
+  fields = ['title', 'author', 'summary', 'code', 'topic', 'level']
+
+class CourseUpdateView(UpdateView):
+  model = Course
+  fields = ['title', 'author', 'summary', 'topic', 'level']
+
+class CourseDeleteView(DeleteView):
+  model = Course
+  success_url = 'course_list'

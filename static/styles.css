@@ -7,8 +7,14 @@ body {
 
 a {
   color: lightgreen;
+  font-size: small;
+  padding: 0 5vw;
 }
 
 main {
   margin: 7vh 0;
+}
+
+nav {
+  margin-top: 1vh;
 }
