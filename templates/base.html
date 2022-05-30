@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Courses</title>
+    <title>{% block title %}Courses{% endblock %}</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'styles.css' %}">
   </head>
   <body>
     {% block sidebar %}
-      <a href="{% url 'index' %}">Catalog Home</a>
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'index' %}">Catalog</a>
       <a href="{% url 'course_list' %}">All Courses</a>
     {% endblock %}
     <main>
