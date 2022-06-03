@@ -4,6 +4,10 @@ Django full-stack site hosting our course catalog.
 
 ### Features
 
-- Custom user model
-- Full CRUD funtionality
 - Custom CSS
+- Gunicorn server
+- Custom user model
+- Deployed on Heroku
+- Environment variables
+- Full CRUD funtionality
+- Cloud Postgres database
