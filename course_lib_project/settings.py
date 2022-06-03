@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 from decouple import config
 from pathlib import Path
-import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'course-lib.herokuapp.com']
 
@@ -73,8 +73,12 @@ WSGI_APPLICATION = 'course_lib_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ciba',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'xyozjekv',
+        'USER': 'xyozjekv',
+        'PASSWORD': config('PASSWORD'),
+        'HOST': config('HOST'),
+        'PORT': 5432
     }
 }
 
