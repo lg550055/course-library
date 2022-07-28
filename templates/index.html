@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Course Catalog</h2>
-  <h3>Catalog Stats</h3>
+<h2>Catalog Stats</h2>
+<div>
   <h4>Courses: {{ num_courses }}</h4>
   <h4>Live Courses: {{ num_instances }}</h4>
   <h4>Active Live Courses: {{ num_instances_active }}</h4>
@@ -12,5 +12,5 @@
   {% if user.is_authenticated %}
     <a href="{% url 'course_create' %}">Add course</a>
   {% endif %}
-
+</div>
 {% endblock %}

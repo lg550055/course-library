@@ -4,16 +4,19 @@
 
 {% block content %}
 
-  <h3>Welcome to our Curriculum site</h3>
-  <br>
-  {% if user.is_authenticated %}
-    Hi {{ user.username }}!
-    <p>See our <a href="{% url 'index' %}">catalog stats</a></p>
-    <p>Or our <a href="{% url 'course_list' %}">course list</a></p>
-  {% else %}
-    <h3>You are not logged in</h3>
-    <a href="{% url 'login' %}">Log In</a> or
-    <a href="{% url 'signup' %}">Sign Up</a>
-  {% endif %}
+  <section>
+    <h3>Welcome to our Curriculum site</h3>
+    <br>
+    {% if user.is_authenticated %}
+      Hi {{ user.username }}!
+      <p>See our <a href="{% url 'index' %}">catalog stats</a></p>
+      <p>Or our <a href="{% url 'course_list' %}">course list</a></p>
+    {% else %}
+      <h4>You are not logged in</h4>
+      <a href="{% url 'login' %}">Log In</a> or
+      <a href="{% url 'signup' %}">Sign Up</a>
+      <h4>To access all<br>functionality</h4>
+    {% endif %}  
+  </section>
 
 {% endblock %}

@@ -5,18 +5,20 @@
 {% block content %}
 
   <h2>Course Detail</h2>
-  <h4>Title: {{ course.title }}</h4>
-  <h5>Topics: {{ course.topic.all|join:', ' }}</h5>
-  <h5>Summary: {{ course.summary }}</h5>
-  <h5>Level: {{ course.level }}</h5>
-  <h5>Author: {{ course.author }}</h5>
-  <h5>Last update: {{ course.modified }}</h5>
-  <p>- - -</p>
-  {% if user.is_authenticated %}
-    <a href="{% url 'course_update' course.id %}">Update course</a>
-    <a href="{% url 'course_delete' course.id %}">Delete course</a>
-  {% else %}
-    <h6>Login to update or delete course</h6>
-  {% endif %}
+  <div>
+    <h4>Title: {{ course.title }}</h4>
+    <h5>Topics: {{ course.topic.all|join:', ' }}</h5>
+    <h5>Summary: {{ course.summary }}</h5>
+    <h5>Level: {{ course.level }}</h5>
+    <h5>Author: {{ course.author }}</h5>
+    <h5>Last update: {{ course.modified }}</h5>
+    <p>- - -</p>
+    {% if user.is_authenticated %}
+      <a href="{% url 'course_update' course.id %}">Update course</a>
+      <a href="{% url 'course_delete' course.id %}">Delete course</a>
+    {% else %}
+      <h6>Login to update or delete course</h6>
+    {% endif %}  
+  </div>
   
 {% endblock %}
